@@ -1,44 +1,48 @@
-class Restaurant:
-    def init(self,restaurant_name,cuisine_type):
-        self.restaurant_name=restaurant_name
-        self.cuisine_type=cuisine_type
-    def describe_restaurant(self):
-        print('Название ресторана: ',self.restaurant_name ,"\nКухня ресторана: ",self.cuisine_type)
-    def open_restaurant(self):
-        print('Ресторан открыт к посещению !')
-newRestaurant = Restaurant('Кавказкая','Индийская')
-newRestaurant.describe_restaurant()
-newRestaurant.open_restaurant()
+def zadacha1():
+    def z1():
+        class Restaurant: #Используется для создания объектов, описывающих рестораны
+            def __init__(self,restaurant_name,cuisine_type):#определяет метод-конструктор класса "Restaurant", который будет вызываться при создании новых объектов.
+                self.restaurant_name=restaurant_name
+                self.cuisine_type=cuisine_type
+            def describe_restaurant(self):
+                print('\nНазвание ресторана: ',self.restaurant_name ,"\n Кухня ресторана: ",self.cuisine_type)
+            def open_restaurant(self):
+                print('  Ресторан открыт к посещению !')
+        newRestaurant = Restaurant('Кавказкая','Индийская')
+        newRestaurant.describe_restaurant()
+        newRestaurant.open_restaurant()
+    def z2():
+        class Restaurant:
+            def __init__(self,restaurant_name,cuisine_type):
+                self.restaurant_name=restaurant_name
+                self.cuisine_type=cuisine_type
+            def describe_restaurant(self):
+                print('\nНазвание ресторана: ',self.restaurant_name ,"\n Кухня ресторана: ",self.cuisine_type)
+            def open_restaurant(self):
+                print('\nРесторан открыт к посещению !')
+        newRestaurant = Restaurant('Морген','Китайская') #создает новый объект класса "Restaurant" с названием "newRestaurant" и параметрами "Морген" и "Китайская"
+        secondRestaurant=Restaurant('Сияние',"Французская") #создает новый объект класса "Restaurant" с названием "secondRestaurant" и параметрами "Сияние" и "Французская"
+        thirdRestaurant=Restaurant('Шашлыкофф','Узбекская')
+        newRestaurant.describe_restaurant()
+        secondRestaurant.describe_restaurant()
+        thirdRestaurant.describe_restaurant()
+    def z3():
+        class Restaurant:
+            rating=4
+            def __init__(self,restaurant_name,cuisine_type,rating):
+                self.restaurant_name=restaurant_name
+                self.cuisine_type=cuisine_type
+                self.rating=rating
+            def describe_restaurant(self):
+                print('\nНазвание ресторана: ',self.restaurant_name ,"\n Кухня ресторана: ",self.cuisine_type,"\nРейтинг" ,self.rating)
+            def open_restaurant(self):
+                print('Ресторан открыт к посещению !')
+            def changerating(self,newrating):
+                self.rating=newrating
 
-class Restaurant:
-    def init(self,restaurant_name,cuisine_type):
-        self.restaurant_name=restaurant_name
-        self.cuisine_type=cuisine_type
-    def describe_restaurant(self):
-        print('Название ресторана: ',self.restaurant_name ,"\nКухня ресторана: ",self.cuisine_type)
-    def open_restaurant(self):
-        print('Ресторан открыт к посещению !')
-newRestaurant = Restaurant('Кавказкая','Индийская')
-secondRestaurant=Restaurant('Сон',"Японская")
-thirdRestaurant=Restaurant('Friends','Грузинская')
-newRestaurant.describe_restaurant()
-secondRestaurant.describe_restaurant()
-thirdRestaurant.describe_restaurant()
-
-class Restaurant:
-    rating=4
-    def init(self,restaurant_name,cuisine_type,rating):
-        self.restaurant_name=restaurant_name
-        self.cuisine_type=cuisine_type
-        self.rating=rating
-    def describe_restaurant(self):
-        print('Название ресторана: ',self.restaurant_name ,"\nКухня ресторана: ",self.cuisine_type,"\nРейтинг" ,self.rating)
-    def open_restaurant(self):
-        print('Ресторан открыт к посещению !')
-    def changerating(self,newrating):
-        self.rating=newrating
-
-newRestaurant = Restaurant('Кавказкая','Индийская',4)
-newRestaurant.describe_restaurant()
-newRestaurant.changerating(3)
-newRestaurant.describe_restaurant()
+        newRestaurant = Restaurant('Морген','Китайская',rating=4)
+        newRestaurant.describe_restaurant()
+        newRestaurant.changerating(int(input("\n Какую оценку Вы поставите этому ресторану? ")))
+        newRestaurant.describe_restaurant()
+    z3()
+zadacha1()
