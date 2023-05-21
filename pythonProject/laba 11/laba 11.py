@@ -8,9 +8,10 @@ def zadacha1():
                 print('\nНазвание ресторана: ',self.restaurant_name ,"\n Кухня ресторана: ",self.cuisine_type)
             def open_restaurant(self):
                 print('  Ресторан открыт к посещению !')
-        newRestaurant = Restaurant('Кавказкая','Индийская')
+        newRestaurant = Restaurant(input("Введите название ресторана: "),input("Введите кухню для ресторана: "))
         newRestaurant.describe_restaurant()
         newRestaurant.open_restaurant()
+    z1()
     def z2():
         class Restaurant:
             def __init__(self,restaurant_name,cuisine_type):
@@ -20,12 +21,13 @@ def zadacha1():
                 print('\nНазвание ресторана: ',self.restaurant_name ,"\n Кухня ресторана: ",self.cuisine_type)
             def open_restaurant(self):
                 print('\nРесторан открыт к посещению !')
-        newRestaurant = Restaurant('Морген','Китайская') #создает новый объект класса "Restaurant" с названием "newRestaurant" и параметрами "Морген" и "Китайская"
-        secondRestaurant=Restaurant('Сияние',"Французская") #создает новый объект класса "Restaurant" с названием "secondRestaurant" и параметрами "Сияние" и "Французская"
+        newRestaurant = Restaurant('Морген','Китайская')
+        secondRestaurant=Restaurant('Сияние',"Французская")
         thirdRestaurant=Restaurant('Шашлыкофф','Узбекская')
         newRestaurant.describe_restaurant()
         secondRestaurant.describe_restaurant()
         thirdRestaurant.describe_restaurant()
+    z2()
     def z3():
         class Restaurant:
             rating=4
